@@ -51,14 +51,13 @@ via the `ucimlrepo` package (id=468).
   (`class_weight='balanced'`)
 - 5-fold stratified cross-validation with `GridSearchCV` (scoring = macro-F1)
 - Final evaluation on the held-out test set (accuracy, precision, recall,
-  F1 on the positive class, AUC)
+  macro-F1, AUC)
 
 ## Results (test set, best model)
 
-| Setting  | Model  | F1    | AUC   |
-|----------|--------|-------|-------|
-| balanced | HistGB | 0.658 | 0.920 |
-| raw      | HistGB | 0.655 | 0.932 |
+| Setting  | Model  | macro-F1 | AUC   |
+|----------|--------|----------|-------|
+| raw      | HistGB | 0.801    | 0.932 |
+| balanced | HistGB | 0.789    | 0.915 |
 
 The trivial majority-class benchmark reaches 84.5% accuracy but zero F1.
-
